@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 nav, header,
 section,
 main, footer {
@@ -8,7 +11,9 @@ html, body {
   height: 100%;
 }
 body {
+  margin: 0;
   font-family: 'Rubik', sans-serif;
+  color: #333;
 }
 h1 {
   font-family: 'Poiret One', cursive;
@@ -25,33 +30,103 @@ ul {
   margin: 0;
   padding: 0;
 }
-/*clearfix*/
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+
+#wrap {
+  height: 100%;
+  background: #f0f0f0 url(images/background.jpg) no-repeat 12% center;
+  background-size: cover;
 }
-/*2 responsive columns*/
-.col-2 {
-  width: 50%;
-  float: left;
+header #nav {
+  display: none;
 }
-/*3 responsive columns*/
-.col-3 {
-  width: 33.33%;
-  float: left;
+#menu {
+  width: 50px;
+  height: 50px;
+  padding-top: 15px;
+  position: fixed;
+  right: 3%;
+  top: 3%;
+  border-radius: 50px;
+  background-color: #fff;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  transition: all 0.4s;
+}
+#menu:hover,
+#menu:focus {
+  cursor: pointer;
+  box-shadow: 0 3px 13px rgba(0, 0, 0, 0.5);
+}
+.menu-line {
+  width: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 7px;
+  border-bottom: 2px solid #222;
+  transition: 0.5s ease-in-out;
+}
+.menu-line:nth-child(1).rotate {
+  -webkit-transform: translate3d(0, 9px, 0) rotate(45deg);
+  transform: translate3d(0, 9px, 0) rotate(45deg);
+}
+.menu-line:nth-child(2).rotate {
+  opacity: 0;
+}
+.menu-line:nth-child(3).rotate {
+  -webkit-transform: translate3d(0, -9px, 0) rotate(-45deg);
+  transform: translate3d(0, -9px, 0) rotate(-45deg);
+}
+#home {
+  position: relative;
+  height: 100%;
+}
+#home h1 {
+  position: absolute;
+  left: 20%;
+  bottom: 40%;
+  font-size: 2em;
+  letter-spacing: 3px;
+}
+#home h1 span {
+  position: absolute;
+  top: 0;
+  font-size: 2.5em;
+  letter-spacing: 2px;
+}
+#find-more {
+  display: block;
+  width: 150px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10%;
+  margin: 0 auto;
+  padding: 10px 0;
+  background-color: #fff;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.5);
+  font-size: 1em;
+  font-weight: 300;
+  text-align: center;
 }
 
-@media screen and (max-width: 768px) {
-  .col-2 {
-    width: 100%;
-    float: none;
-    margin-bottom: 25px;
+
+@media screen and (min-width: 768px) {
+  /*clearfix*/
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
   }
-}
-@media screen and (max-width: 480px) {
+  /*2 responsive columns*/
+  .col-2 {
+    width: 50%;
+    float: left;
+  }
+  /*3 responsive columns*/
   .col-3 {
-    width: 100%;
-    float: none;
+    width: 33.33%;
+    float: left;
   }
 }
