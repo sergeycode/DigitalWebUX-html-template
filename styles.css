@@ -171,7 +171,7 @@ h2 {
   margin-top: 50px;
 }
 
-
+/* layout is mobile first, so breakpoints goes after 768px */
 @media screen and (min-width: 768px) {
   /*clearfix*/
   .row:after {
@@ -244,14 +244,14 @@ h2 {
     font-size: 4.5em;
   }
   #find-more {
-    width: 300px;
+    width: 270px;
     left: 0;
     right: 0;
     bottom: 10%;
     margin: 0 auto;
     padding: 15px 0;
     border-radius: 10px;
-    font-size: 2em;
+    font-size: 1.75em;
     font-weight: 300;
   }
   #about-us .color-box,
@@ -274,6 +274,10 @@ h2 {
   .text-box {
     padding: 65px;
     font-size: 1.125em;
+    /* to drop shadow to each element we need z-index which only works with position */
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 7px 16px rgba(51, 51, 51, 0.5);
   }
   .text-box p {
     margin: 0;
@@ -307,5 +311,113 @@ h2 {
     margin-top: -200px;
     background: #f0f0f0 url(images/headphones-bg.jpg) no-repeat center;
     background-size: cover;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #home h1 {
+    width: 550px;
+    bottom: 50%;
+    font-size: 5.5em;
+  }
+  h2 {
+    font-size: 1.75em;
+  }
+  #about-us .color-box,
+  #contacts .color-box {
+    padding: 75px 75px 75px 0;
+  }
+  #services .color-box {
+    padding: 75px 0 75px 75px;
+  }
+  .text-box {
+    padding: 75px;
+    font-size: 1.25em;
+  }
+  #our-works .color-box {
+    padding: 200px 75px 100px 0;
+  }
+  #our-works .color-box.links {
+    height: 195px;
+    padding: 30px 0 0 40px;
+  }
+  #contacts li:last-of-type {
+    margin-top: 100px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  h2 {
+    font-size: 2em;
+  }
+  #about-us .color-box,
+  #contacts .color-box {
+    padding: 120px 120px 120px 0;
+  }
+  #services .color-box {
+    padding: 120px 0 120px 120px;
+  }
+  .line {
+    width: 130px;
+  }
+  .text-box {
+    padding: 120px;
+    line-height: 1.4;
+  }
+  #our-works .color-box {
+    padding: 200px 120px 100px 0;
+    text-align: right;
+  }
+  #our-works .color-box.links {
+    height: 200px;
+    padding: 30px 0 0 40px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  #home h1 {
+    width: 700px;
+    bottom: 50%;
+    font-size: 6.5em;
+  }
+  h2 {
+    font-size: 2.5em;
+  }
+  #about-us .color-box,
+  #contacts .color-box {
+    padding: 150px 130px 150px 0;
+  }
+  #services .color-box {
+    padding: 150px 0 130px 150px;
+  }
+  .line {
+    width: 160px;
+  }
+  .text-box {
+    padding: 150px;
+    font-size: 1.5em;
+    line-height: 1.5;
+  }
+  #services {
+    margin-top: -125px;
+  }
+  #our-works {
+    margin-top: -220px;
+  }
+  #our-works .color-box {
+    padding: 350px 130px 150px 0;
+    text-align: right;
+  }
+  #our-works .color-box.links {
+    height: 339px;
+    padding: 60px 0 0 60px;
+    font-size: 1.5em;
+  }
+  #contacts {
+    margin-top: -340px;
+  }
+  #contacts li {
+    font-size: 1.25em;
+  }
+  #contacts li:last-of-type {
+    margin-top: 150px;
+    font-size: 1em;
   }
 }
