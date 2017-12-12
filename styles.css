@@ -52,14 +52,14 @@ header #nav {
   top: 3%;
   border-radius: 50px;
   background-color: #fff;
-  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 16px rgba(51, 51, 51, 0.5);
   z-index: 100;
   transition: all 0.4s;
+  cursor: pointer;
 }
 #menu:hover,
 #menu:focus {
-  cursor: pointer;
-  box-shadow: 0 3px 13px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 13px rgba(51, 51, 51, 0.5);
 }
 .menu-line {
   width: 25px;
@@ -109,15 +109,15 @@ header #nav {
   background-color: #fff;
   color: #333;
   border-radius: 10px;
-  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 16px rgba(51, 51, 51, 0.5);
   font-size: 1em;
   font-weight: 300;
   text-align: center;
+  cursor: pointer;
 }
 #find-more:hover,
 #find-more:focus {
-  cursor: pointer;
-  box-shadow: 0 3px 13px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 13px rgba(51, 51, 51, 0.5);
 }
 .color-box {
   padding: 50px 0;
@@ -179,6 +179,7 @@ h2 {
     display: table;
     clear: both;
   }
+  /* responsive grid, class names based on bootstrap grid */
   .col-12 {
     width: 100%;
   }
@@ -220,8 +221,91 @@ h2 {
   .col-9, .col-10, .col-11, .col-12 {
     float: left;
   }
+  #menu {
+    width: 65px;
+    height: 65px;
+    padding-top: 21px;
+    position: fixed;
+    right: 5%;
+    top: 4%;
+  }
+  .menu-line {
+    width: 29px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 9px;
+  }
+  #home h1 {
+    width: 500px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 45%;
+    font-size: 4.5em;
+  }
+  #find-more {
+    width: 300px;
+    left: 0;
+    right: 0;
+    bottom: 10%;
+    margin: 0 auto;
+    padding: 15px 0;
+    border-radius: 10px;
+    font-size: 2em;
+    font-weight: 300;
+  }
+  #about-us .color-box,
+  #contacts .color-box {
+    text-align: right;
+    padding: 70px 65px 70px 0;
+  }
+  #services .color-box {
+    text-align: left;
+    padding: 70px 0 70px 65px;
+  }
+  #about-us .line,
+  #our-works .line,
+  #contacts .line {
+    margin-right: 0;
+  }
+  #services .line {
+    margin-left: 0;
+  }
+  .text-box {
+    padding: 65px;
+    font-size: 1.125em;
+  }
+  .text-box p {
+    margin: 0;
+  }
   #services {
+    margin-top: -110px;
     background: #f0f0f0 url(images/laptops-bg.jpg) no-repeat center;
+    background-size: cover;
+  }
+  #services img,
+  #contacts img {
+    display: none;
+  }
+  #services .color-box,
+  #services .text-box {
+    float: right;
+  }
+  #our-works {
+    margin-top: -150px;
+  }
+  #our-works .color-box {
+    padding: 200px 50px 100px 0;
+    text-align: right;
+  }
+  #our-works .color-box.links {
+    height: 190px;
+    padding: 25px 0 0 25px;
+    text-align: left;
+  }
+  #contacts {
+    margin-top: -200px;
+    background: #f0f0f0 url(images/headphones-bg.jpg) no-repeat center;
     background-size: cover;
   }
 }
