@@ -19,6 +19,7 @@ body {
   font-size: 100%;
   font-weight: 300;
   color: #333;
+  transition: all 0.5s ease-in-out;
 }
 h1 {
   font-family: 'Poiret One', cursive;
@@ -61,20 +62,34 @@ ul {
 }
 #nav {
   position: fixed;
-  top: 15%;
-  right: 15%;
+  top: -10px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background-color: #9bd8d0;
+  border-radius: 50%;
   font-size: 2em;
   font-weight: 700;
   text-transform: uppercase;
-  opacity: 0;
+  transform: scale(0);
+  transform-origin: 68% 8%;
+  transition: all 0.6s ease-in-out;
   z-index: 10;
-  transition: opacity 0.6s ease-in-out;
+}
+#nav-links {
+  margin: 100px 0 0 70px;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
 }
 #nav li {
   margin-bottom: 10px;
 }
 #nav a {
-  color: #cb9d36;
+  color: #fff;
+}
+#nav a:hover,
+#nav a:focus {
+  color: #659690;
 }
 #menu {
   width: 50px;
@@ -263,6 +278,9 @@ h2 {
   .col-9, .col-10, .col-11, .col-12 {
     float: left;
   }
+  #nav {
+    transform-origin: 60% 15%;
+  }
   #menu {
     width: 64px;
     height: 64px;
@@ -322,7 +340,7 @@ h2 {
     font-size: 1.125em;
     /* to drop shadow to each element we need z-index which only works with position */
     position: relative;
-    z-index: 10;
+    z-index: 1;
     box-shadow: 0 7px 16px rgba(51, 51, 51, 0.5);
   }
   .text-box p {
@@ -371,6 +389,19 @@ h2 {
   h2 {
     font-size: 1.75em;
   }
+  #nav {
+    top: -50px;
+    right: -150px;
+    width: 800px;
+    height: 800px;
+    font-size: 2.5em;
+    transform-origin: 72% 12%;
+  }
+  #nav-links {
+    margin: 200px 0 0 140px;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+  }
   #about-us .color-box,
   #contacts .color-box {
     padding: 75px 75px 75px 0;
@@ -399,6 +430,10 @@ h2 {
 @media screen and (min-width: 1280px) {
   h2 {
     font-size: 2em;
+  }
+  #nav {
+    font-size: 3em;
+    transform-origin: 70% 11%;
   }
   #about-us .color-box,
   #contacts .color-box {
