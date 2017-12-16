@@ -32,24 +32,6 @@ a {
   text-decoration: none;
   transition: all 0.3s ease-in-out;
 }
-a.decorate {
-  /* position relative so pseudo-element :before can be absolute to it */
-  position: relative;
-}
-a.decorate::before {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  content: "";
-  display: block;
-  border-bottom: 2px solid #333;
-  width: 0%;
-  transition: width 0.3s ease-in-out;
-}
-a.decorate:hover::before,
-a.decorate:focus::before {
-    width: 100%;
-}
 ul {
   list-style-type: none;
   margin: 0;
@@ -212,8 +194,9 @@ h2 {
   color: #659690;
   font-size: 1.125em;
 }
-#our-works a.decorate::before {
-  border-bottom: 2px solid #659690;
+#our-works a:hover,
+#our-works a:focus {
+  color: #fff;
 }
 #our-works .color-box.links {
   padding: 0 0 50px 0;
@@ -221,8 +204,9 @@ h2 {
 #contacts a {
   color: #cb9d36;
 }
-#contacts a.decorate::before {
-  border-bottom: 2px solid #cb9d36;
+#contacts a:hover,
+#contacts a:focus {
+  color: #fff;
 }
 #contacts li:last-of-type {
   margin-top: 50px;

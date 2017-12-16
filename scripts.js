@@ -36,8 +36,3 @@ navLink.forEach( function (e) {
         }
     });
 });
-
-
-//    $('#arrow-down').click(function(){
-//        $.fn.fullpage.moveSectionDown();
-//    });
