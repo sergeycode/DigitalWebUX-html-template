@@ -39,7 +39,7 @@ ul {
 }
 #wrap {
   height: 100%;
-  background: #f0f0f0 url(images/background.jpg) no-repeat 12% center;
+  background: #f0f0f0 url(../images/background.jpg) no-repeat 12% center;
   background-size: cover;
 }
 #nav {
@@ -332,7 +332,7 @@ h2 {
   }
   #services {
     margin-top: -110px;
-    background: #f0f0f0 url(images/laptops-bg.jpg) no-repeat center;
+    background: #f0f0f0 url(../images/laptops-bg.jpg) no-repeat center;
     background-size: cover;
   }
   #services img,
@@ -357,7 +357,7 @@ h2 {
   }
   #contacts {
     margin-top: -200px;
-    background: #f0f0f0 url(images/headphones-bg.jpg) no-repeat center;
+    background: #f0f0f0 url(../images/headphones-bg.jpg) no-repeat center;
     background-size: cover;
   }
   #contacts li {
